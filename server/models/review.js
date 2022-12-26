@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { reviewSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { reviewSchema } = require("./schemas");
 
 const reviewDB = mongoose.model("reviews", reviewSchema);
 
@@ -33,4 +33,4 @@ class ReviewModel {
 
 const reviewModel = new ReviewModel(reviewDB);
 
-export default reviewModel;
+module.exports = reviewModel;

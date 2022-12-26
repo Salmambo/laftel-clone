@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { videoSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { videoSchema } = require("./schemas");
 
 const videoDB = mongoose.model("videos", videoSchema);
 
@@ -22,4 +22,4 @@ class VideoModel {
 
 const videoModel = new VideoModel(videoDB);
 
-export default videoModel;
+module.exports = videoModel;

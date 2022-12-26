@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { itemService, videoService } from "../../services";
+const { Router } = require("express");
+const { itemService, videoService } = require("../../services");
 
 const finderController = Router();
 
@@ -13,4 +13,4 @@ finderController.get("/", async (req, res, next) => {
   }
 });
 
-export default finderController;
+module.exports = finderController;

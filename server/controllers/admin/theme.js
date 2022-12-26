@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { themeService } from "../../services";
+const { Router } = require("express");
+const { themeService } = require("../../services");
 
 const themeController = Router();
 
@@ -12,4 +12,4 @@ themeController.post("/", async (req, res, next) => {
   }
 });
 
-export default themeController;
+module.exports = themeController;

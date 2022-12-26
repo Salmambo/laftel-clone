@@ -1,4 +1,4 @@
-import { themeModel } from "../models";
+const { themeModel } = require("../models");
 
 class ThemeService {
   constructor(themeModel) {
@@ -29,4 +29,4 @@ class ThemeService {
 
 const themeService = new ThemeService(themeModel);
 
-export default themeService;
+module.exports = themeService;

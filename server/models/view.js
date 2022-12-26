@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { viewSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { viewSchema } = require("./schemas");
 
 const viewDB = mongoose.model("views", viewSchema);
 
@@ -26,4 +26,4 @@ class ViewModel {
 
 const viewModel = new ViewModel(viewDB);
 
-export default viewModel;
+module.exports = viewModel;

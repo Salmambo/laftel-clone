@@ -1,21 +1,9 @@
-import itemService from "./item";
-import posterService from "./poster";
-import themeService from "./theme";
-import viewService from "./view";
-import videoService from "./video";
-import episodeService from "./episode";
-import reviewService from "./review";
-import userService from "./user";
-import starService from "./star";
-
-export {
-  itemService,
-  posterService,
-  themeService,
-  viewService,
-  videoService,
-  episodeService,
-  reviewService,
-  userService,
-  starService,
-};
+exports.itemService = require("./item");
+exports.posterService = require("./poster");
+exports.themeService = require("./theme");
+exports.viewService = require("./view");
+exports.videoService = require("./video");
+exports.episodeService = require("./episode");
+exports.reviewService = require("./review");
+exports.userService = require("./user");
+exports.starService = require("./star");

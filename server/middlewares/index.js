@@ -1,4 +1,2 @@
-import errorHandler from "./errorHandler";
-import checkAccess from "./checkAccess";
-
-export { errorHandler, checkAccess };
+exports.errorHandler = require("./errorHandler");
+exports.checkAccess = require("./checkAccess");

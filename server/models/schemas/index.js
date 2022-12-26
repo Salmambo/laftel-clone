@@ -1,21 +1,9 @@
-import itemSchema from "./item";
-import posterSchema from "./poster";
-import themeSchema from "./theme";
-import viewSchema from "./view";
-import videoSchema from "./video";
-import episodeSchema from "./episode";
-import reviewSchema from "./review";
-import userSchema from "./user";
-import starSchema from "./star";
-
-export {
-  itemSchema,
-  posterSchema,
-  themeSchema,
-  viewSchema,
-  videoSchema,
-  episodeSchema,
-  reviewSchema,
-  userSchema,
-  starSchema,
-};
+exports.itemSchema = require("./item");
+exports.posterSchema = require("./poster");
+exports.themeSchema = require("./theme");
+exports.viewSchema = require("./view");
+exports.videoSchema = require("./video");
+exports.episodeSchema = require("./episode");
+exports.reviewSchema = require("./review");
+exports.userSchema = require("./user");
+exports.starSchema = require("./star");

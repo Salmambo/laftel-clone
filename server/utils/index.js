@@ -1,6 +1,6 @@
-import hashPassword from "./hashPassword";
-import sendMail from "./sendMail";
-import jwt from "./jwt";
-import { redisClient, redis } from "./redis";
-
-export { hashPassword, sendMail, jwt, redisClient, redis };
+const { redisClient, redis } = require("./redis");
+exports.redisClient = redisClient;
+exports.redis = redis;
+exports.hashPassword = require("./hashPassword");
+exports.sendMail = require("./sendMail");
+exports.jwt = require("./jwt");

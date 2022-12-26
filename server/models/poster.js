@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { posterSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { posterSchema } = require("./schemas");
 
 const posterDB = mongoose.model("posters", posterSchema);
 
@@ -19,4 +19,4 @@ class PosterModel {
 
 const posterModel = new PosterModel(posterDB);
 
-export default posterModel;
+module.exports = posterModel;

@@ -1,9 +1,9 @@
-import { Router } from "express";
-import { itemService, videoService } from "../../../services";
-import episodesController from "./episodes";
-import reviewsController from "./reviews";
-import relatedController from "./related";
-import { checkAccess } from "../../../middlewares";
+const { Router } = require("express");
+const { itemService, videoService } = require("../../../services");
+const episodesController = require("./episodes");
+const reviewsController = require("./reviews");
+const relatedController = require("./related");
+const { checkAccess } = require("../../../middlewares");
 
 const itemController = Router();
 
@@ -42,4 +42,4 @@ itemController.patch(
 );
 itemController.get("/:itemId/related", relatedController.get);
 
-export default itemController;
+module.exports = itemController;

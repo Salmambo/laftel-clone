@@ -1,4 +1,4 @@
-import { itemModel } from "../models";
+const { itemModel } = require("../models");
 
 class ItemService {
   constructor(itemModel) {
@@ -73,7 +73,7 @@ class ItemService {
 
 const itemService = new ItemService(itemModel);
 
-export default itemService;
+module.exports = itemService;
 
 function decode(str) {
   const result = [];

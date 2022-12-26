@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { posterService } from "../../services";
+const { Router } = require("express");
+const { posterService } = require("../../services");
 
 const posterController = Router();
 
@@ -12,4 +12,4 @@ posterController.post("/", async (req, res, next) => {
   }
 });
 
-export default posterController;
+module.exports = posterController;

@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { episodeService, videoService } from "../../services";
+const { Router } = require("express");
+const { episodeService, videoService } = require("../../services");
 
 const episodeController = Router();
 
@@ -13,4 +13,4 @@ episodeController.post("/", async (req, res, next) => {
   }
 });
 
-export default episodeController;
+module.exports = episodeController;

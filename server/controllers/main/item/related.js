@@ -1,4 +1,4 @@
-import { itemService } from "../../../services";
+const { itemService } = require("../../../services");
 
 const relatedController = {
   get: async (req, res, next) => {
@@ -11,4 +11,4 @@ const relatedController = {
   },
 };
 
-export default relatedController;
+module.exports = relatedController;

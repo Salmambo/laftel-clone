@@ -1,5 +1,5 @@
-import { starModel } from "../models";
-import { jwt } from "../utils";
+const { starModel } = require("../models");
+const { jwt } = require("../utils");
 
 class StarService {
   constructor(starModel) {
@@ -92,4 +92,4 @@ class StarService {
 
 const starService = new StarService(starModel);
 
-export default starService;
+module.exports = starService;

@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { themeService, videoService } from "../../services";
+const { Router } = require("express");
+const { themeService, videoService } = require("../../services");
 
 const themesController = Router();
 
@@ -22,4 +22,4 @@ themesController.get("/:themeId", async (req, res, next) => {
   }
 });
 
-export default themesController;
+module.exports = themesController;

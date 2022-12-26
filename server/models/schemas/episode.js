@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+const { Schema } = require("mongoose");
 
 const episodeSchema = new Schema(
   {
@@ -19,4 +19,4 @@ const episodeSchema = new Schema(
   }
 );
 
-export default episodeSchema;
+module.exports = episodeSchema;

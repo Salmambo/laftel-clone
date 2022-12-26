@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { episodeSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { episodeSchema } = require("./schemas");
 
 const episodeDB = mongoose.model("episodes", episodeSchema);
 
@@ -20,4 +20,4 @@ class EpisodeModel {
 
 const episodeModel = new EpisodeModel(episodeDB);
 
-export default episodeModel;
+module.exports = episodeModel;

@@ -1,4 +1,8 @@
-import { reviewService, videoService, starService } from "../../../services";
+const {
+  reviewService,
+  videoService,
+  starService,
+} = require("../../../services");
 
 const reviewsController = {
   post: async (req, res, next) => {
@@ -77,4 +81,4 @@ const reviewsController = {
   },
 };
 
-export default reviewsController;
+module.exports = reviewsController;

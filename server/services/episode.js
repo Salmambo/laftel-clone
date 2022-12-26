@@ -1,4 +1,4 @@
-import { episodeModel } from "../models";
+const { episodeModel } = require("../models");
 
 class EpisodeService {
   constructor(episodeModel) {
@@ -18,4 +18,4 @@ class EpisodeService {
 
 const episodeService = new EpisodeService(episodeModel);
 
-export default episodeService;
+module.exports = episodeService;

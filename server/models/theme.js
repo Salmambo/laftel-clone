@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { themeSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { themeSchema } = require("./schemas");
 
 const themeDB = mongoose.model("themes", themeSchema);
 
@@ -23,4 +23,4 @@ class ThemeModel {
 
 const themeModel = new ThemeModel(themeDB);
 
-export default themeModel;
+module.exports = themeModel;

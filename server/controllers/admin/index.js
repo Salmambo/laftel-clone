@@ -1,8 +1,8 @@
-import { Router } from "express";
-import itemController from "./item";
-import posterController from "./poster";
-import themeController from "./theme";
-import episodeController from "./episode";
+const { Router } = require("express");
+const itemController = require("./item");
+const posterController = require("./poster");
+const themeController = require("./theme");
+const episodeController = require("./episode");
 
 const adminController = Router();
 
@@ -11,4 +11,4 @@ adminController.use("/poster", posterController);
 adminController.use("/theme", themeController);
 adminController.use("/episode", episodeController);
 
-export default adminController;
+module.exports = adminController;

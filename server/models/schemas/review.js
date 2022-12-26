@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+const { Schema } = require("mongoose");
 
 const reviewSchema = new Schema(
   {
@@ -18,4 +18,4 @@ const reviewSchema = new Schema(
   }
 );
 
-export default reviewSchema;
+module.exports = reviewSchema;

@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+const { Schema } = require("mongoose");
 
 const videoSchema = new Schema(
   {
@@ -24,4 +24,4 @@ const videoSchema = new Schema(
   }
 );
 
-export default videoSchema;
+module.exports = videoSchema;

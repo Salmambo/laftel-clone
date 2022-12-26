@@ -1,21 +1,9 @@
-import itemModel from "./item";
-import posterModel from "./poster";
-import themeModel from "./theme";
-import viewModel from "./view";
-import videoModel from "./video";
-import episodeModel from "./episode";
-import reviewModel from "./review";
-import userModel from "./user";
-import starModel from "./star";
-
-export {
-  itemModel,
-  posterModel,
-  themeModel,
-  viewModel,
-  videoModel,
-  episodeModel,
-  reviewModel,
-  userModel,
-  starModel,
-};
+exports.itemModel = require("./item");
+exports.posterModel = require("./poster");
+exports.themeModel = require("./theme");
+exports.viewModel = require("./view");
+exports.videoModel = require("./video");
+exports.episodeModel = require("./episode");
+exports.reviewModel = require("./review");
+exports.userModel = require("./user");
+exports.starModel = require("./star");

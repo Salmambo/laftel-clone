@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { starSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { starSchema } = require("./schemas");
 
 const starDB = mongoose.model("stars", starSchema);
 
@@ -29,4 +29,4 @@ class StarModel {
 
 const starModel = new StarModel(starDB);
 
-export default starModel;
+module.exports = starModel;

@@ -1,7 +1,7 @@
-import "dotenv/config";
-import mongoose from "mongoose";
-import { redisClient } from "./utils";
-import app from "./app";
+require("dotenv").config();
+const mongoose = require("mongoose");
+const { redisClient } = require("./utils");
+const app = require("./app");
 
 const port = process.env.SERVER_PORT || 5000;
 const mongoDB = process.env.MONGODB_URI;

@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import "dotenv/config";
+const bcrypt = require("bcrypt");
+require("dotenv").config();
 
 const salt = Number(process.env.BCRYPT_SALT);
 
@@ -16,4 +16,4 @@ class HashPassword {
 
 const hashPassword = new HashPassword();
 
-export default hashPassword;
+module.exports = hashPassword;

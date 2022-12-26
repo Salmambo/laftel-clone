@@ -1,5 +1,5 @@
-import { userModel } from "../models";
-import { hashPassword, sendMail, jwt, redis } from "../utils";
+const { userModel } = require("../models");
+const { hashPassword, sendMail, jwt, redis } = require("../utils");
 
 class UserService {
   constructor(userModel) {
@@ -54,7 +54,7 @@ class UserService {
 
 const userService = new UserService(userModel);
 
-export default userService;
+module.exports = userService;
 
 function randomNumber() {
   const number = Math.floor(Math.random() * 1000000);

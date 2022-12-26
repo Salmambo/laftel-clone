@@ -1,5 +1,5 @@
-import nodemailer from "nodemailer";
-import "dotenv/config";
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const transport = nodemailer.createTransport({
   service: "Gmail",
@@ -9,11 +9,11 @@ const transport = nodemailer.createTransport({
   },
 });
 
-export default async function sendMail(email, text) {
+module.exports = async function sendMail(email, text) {
   await transport.sendMail({
     from: "Laftel <laftel@elice.io>",
     to: email,
     subject: "Welcome to Laftel",
     text,
   });
-}
+};

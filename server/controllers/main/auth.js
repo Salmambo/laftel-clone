@@ -1,6 +1,6 @@
-import { Router } from "express";
-import { userService } from "../../services";
-import { jwt } from "../../utils";
+const { Router } = require("express");
+const { userService } = require("../../services");
+const { jwt } = require("../../utils");
 
 const authController = Router();
 
@@ -53,4 +53,4 @@ authController.get("/refresh", async (req, res, next) => {
   }
 });
 
-export default authController;
+module.exports = authController;

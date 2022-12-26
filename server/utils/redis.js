@@ -1,5 +1,5 @@
-import { createClient } from "redis";
-import "dotenv/config";
+const { createClient } = require("redis");
+require("dotenv").config();
 
 const redisHost = process.env.REDIS_HOST;
 const redisPort = process.env.REDIS_PORT;
@@ -31,4 +31,5 @@ class Redis {
 
 const redis = new Redis(redisClient);
 
-export { redisClient, redis };
+exports.redisClient = redisClient;
+exports.redis = redis;

@@ -1,5 +1,5 @@
-import { reviewModel } from "../models";
-import { jwt } from "../utils";
+const { reviewModel } = require("../models");
+const { jwt } = require("../utils");
 
 class ReviewService {
   constructor(reviewModel) {
@@ -59,4 +59,4 @@ class ReviewService {
 
 const reviewService = new ReviewService(reviewModel);
 
-export default reviewService;
+module.exports = reviewService;

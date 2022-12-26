@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+const { Schema } = require("mongoose");
 
 const starSchema = new Schema(
   {
@@ -17,4 +17,4 @@ const starSchema = new Schema(
   }
 );
 
-export default starSchema;
+module.exports = starSchema;

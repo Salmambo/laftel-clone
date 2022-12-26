@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { itemService } from "../../services";
+const { Router } = require("express");
+const { itemService } = require("../../services");
 
 const searchController = Router();
 
@@ -12,4 +12,4 @@ searchController.get("/", async (req, res, next) => {
   }
 });
 
-export default searchController;
+module.exports = searchController;

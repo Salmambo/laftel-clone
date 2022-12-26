@@ -1,10 +1,10 @@
-import { Router } from "express";
-import mainController from "./main";
-import adminController from "./admin";
+const { Router } = require("express");
+const mainController = require("./main");
+const adminController = require("./admin");
 
 const controller = Router();
 
 controller.use("/main", mainController);
 controller.use("/admin", adminController);
 
-export default controller;
+module.exports = controller;

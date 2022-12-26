@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { itemService } from "../../services";
+const { Router } = require("express");
+const { itemService } = require("../../services");
 
 const daysController = Router();
 
@@ -12,4 +12,4 @@ daysController.get("/", async (req, res, next) => {
   }
 });
 
-export default daysController;
+module.exports = daysController;

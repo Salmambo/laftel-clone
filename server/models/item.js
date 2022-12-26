@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { itemSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { itemSchema } = require("./schemas");
 
 const itemDB = mongoose.model("items", itemSchema);
 
@@ -24,4 +24,4 @@ class ItemModel {
 
 const itemModel = new ItemModel(itemDB);
 
-export default itemModel;
+module.exports = itemModel;

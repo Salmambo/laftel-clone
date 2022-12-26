@@ -1,4 +1,4 @@
-import { episodeService, viewService } from "../../../services";
+const { episodeService, viewService } = require("../../../services");
 
 const episodesController = {
   get: async (req, res, next) => {
@@ -19,4 +19,4 @@ const episodesController = {
   },
 };
 
-export default episodesController;
+module.exports = episodesController;

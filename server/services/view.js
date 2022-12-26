@@ -1,4 +1,4 @@
-import { viewModel } from "../models";
+const { viewModel } = require("../models");
 
 class ViewService {
   constructor(viewModel) {
@@ -30,7 +30,7 @@ class ViewService {
 
 const viewService = new ViewService(viewModel);
 
-export default viewService;
+module.exports = viewService;
 
 async function resetViews() {
   const views = await viewModel.findAll();

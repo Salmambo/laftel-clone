@@ -1,9 +1,9 @@
-import express from "express";
-import cors from "cors";
-import cookieParser from "cookie-parser";
-import createError from "http-errors";
-import controller from "./controllers";
-import { errorHandler } from "./middlewares";
+const express = require("express");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const createError = require("http-errors");
+const controller = require("./controllers");
+const { errorHandler } = require("./middlewares");
 
 const app = express();
 
@@ -17,4 +17,4 @@ app.use("/api", controller);
 app.use((req, res, next) => next(createError(404)));
 app.use(errorHandler);
 
-export default app;
+module.exports = app;

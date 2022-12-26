@@ -1,4 +1,4 @@
-import { posterModel } from "../models";
+const { posterModel } = require("../models");
 
 class PosterService {
   constructor(posterModel) {
@@ -16,4 +16,4 @@ class PosterService {
 
 const posterService = new PosterService(posterModel);
 
-export default posterService;
+module.exports = posterService;

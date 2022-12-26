@@ -1,11 +1,11 @@
-import { Router } from "express";
-import { posterService, themeService, viewService } from "../../services";
-import daysController from "./days";
-import searchController from "./search";
-import finderController from "./finder";
-import themesController from "./themes";
-import itemController from "./item";
-import authController from "./auth";
+const { Router } = require("express");
+const { posterService, themeService, viewService } = require("../../services");
+const daysController = require("./days");
+const searchController = require("./search");
+const finderController = require("./finder");
+const themesController = require("./themes");
+const itemController = require("./item");
+const authController = require("./auth");
 
 const mainController = Router();
 
@@ -26,4 +26,4 @@ mainController.use("/themes", themesController);
 mainController.use("/item", itemController);
 mainController.use("/auth", authController);
 
-export default mainController;
+module.exports = mainController;

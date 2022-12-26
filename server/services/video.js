@@ -1,4 +1,4 @@
-import { videoModel } from "../models";
+const { videoModel } = require("../models");
 
 class VideoService {
   constructor(videoModel) {
@@ -64,7 +64,7 @@ class VideoService {
 
 const videoService = new VideoService(videoModel);
 
-export default videoService;
+module.exports = videoService;
 
 async function modifyItems(items) {
   const result = [];

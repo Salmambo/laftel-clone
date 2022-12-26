@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { userSchema } from "./schemas";
+const mongoose = require("mongoose");
+const { userSchema } = require("./schemas");
 
 const userDB = mongoose.model("users", userSchema);
 
@@ -23,4 +23,4 @@ class UserModel {
 
 const userModel = new UserModel(userDB);
 
-export default userModel;
+module.exports = userModel;

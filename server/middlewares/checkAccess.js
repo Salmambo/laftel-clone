@@ -1,6 +1,6 @@
-import { jwt } from "../utils";
+const { jwt } = require("../utils");
 
-export default async function checkAccess(req, res, next) {
+module.exports = async function checkAccess(req, res, next) {
   const { accesstoken } = req.headers;
   if (!accesstoken) return next(new Error("unauthorized"));
   try {
@@ -10,4 +10,4 @@ export default async function checkAccess(req, res, next) {
     err.message = "unauthorized";
     next(err);
   }
-}
+};
