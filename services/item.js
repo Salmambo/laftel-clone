@@ -33,7 +33,7 @@ class ItemService {
     if (items.length === 0) throw new Error("no content");
     return items;
   }
-  async findByTags({ _id, genre, xgenre, tags, xtags }) {
+  async findByTags({ itemid, genre, xgenre, tags, xtags }) {
     const condition = {
       genre: genre || xgenre ? {} : { $exists: true },
       tags: tags || xtags ? {} : { $exists: true },
@@ -42,9 +42,9 @@ class ItemService {
     if (xgenre) condition.genre.$nin = decode(xgenre);
     if (tags) condition.tags.$all = decode(tags);
     if (xtags) condition.tags.$nin = decode(xtags);
-    if (_id) {
+    if (itemid) {
       const items = await this.itemModel.findSome({
-        _id: { $lt: _id },
+        _id: { $lt: itemid },
         ...condition,
       });
       if (items.length === 0) throw new Error("no content");
