@@ -4,7 +4,9 @@
 
 ## 1. 배포
 
-[링크](https://web-laftel-client-fao2flc1yasyv.gksl2.cloudtype.app/)
+- [React](https://web-laftel-clone-20z52flc4ct8jz.gksl2.cloudtype.app)
+- [Express](https://port-0-laftel-clone-ll32glc4a6m60.gksl2.cloudtype.app/)
+- [클라우드타입](https://cloudtype.io/) 이용
 
 ## 2. 서비스 주요 기능 설명
 
@@ -106,7 +108,8 @@ https://user-images.githubusercontent.com/116259958/209417662-90d07fee-a9be-40e0
 - 백엔드
   ```bash
     cd server
-    yarn start
+    npm install
+    npm start
   ```
 
 ## 9. 버전
